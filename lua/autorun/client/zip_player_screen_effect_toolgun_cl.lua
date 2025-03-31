@@ -1,0 +1,8 @@
+hook.Add( "PopulateToolMenu", "ZIPPlayerScreenEffectCustomMenuSettings", function()
+	spawnmenu.AddToolMenuOption( "Utilities", "PlayerScreenEffect", "Custom_Menu", "#PlayerScreenEffect", "", "", function( panel )
+		panel:AddControl( "Header", { Description = "#this buttons allows you to deactivate/enable the black and white effect on players screen for the whole server" } )
+		panel:AddControl("button", {Text = "Disable Player Screen Effect for everyone", Command = "disable_player_screen_effect"})
+		panel:AddControl("button", {Text = "Enable Player Screen Effect for everyone", Command = "enable_player_screen_effect"})
+		panel:AddControl("Label", {Text = "ZIP - PlayerScreen Black and White - 2022/2024 By YohSambre"})
+	end )
+end )
